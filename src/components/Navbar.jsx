@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Terminal, Code2 } from 'lucide-react';
+import { Menu, X, Code2 } from 'lucide-react';
 
 export const Navbar = ({ personal, social }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,24 +14,18 @@ export const Navbar = ({ personal, social }) => {
   }, []);
 
   const navLinks = [
-    { name: 'Inicio', href: '#inicio' },
     { name: 'Sobre mí', href: '#sobre-mi' },
     { name: 'Habilidades', href: '#habilidades' },
     { name: 'Proyectos', href: '#proyectos' },
-    { name: 'Trayectoria', href: '#trayectoria' },
-    { name: 'Contacto', href: '#contacto' },
   ];
 
   return (
     <header className={`navbar-header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-wrapper">
-        <a href="#inicio" className="brand-logo">
+        <a href="#sobre-mi" className="brand-logo" aria-label="Sobre mí">
           <div className="logo-icon-box">
             <Code2 size={20} className="logo-icon" />
           </div>
-          <span className="brand-name">
-            dev<span className="brand-accent">.portfolio</span>
-          </span>
         </a>
 
         {/* Desktop Menu */}
@@ -49,7 +43,7 @@ export const Navbar = ({ personal, social }) => {
 
         <div className="nav-actions">
           <a href="#contacto" className="btn btn-primary nav-contact-btn">
-            Hablemos
+            Contacto
           </a>
           <button
             className="mobile-toggle"
@@ -82,7 +76,7 @@ export const Navbar = ({ personal, social }) => {
                 className="btn btn-primary mobile-btn"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Hablemos
+                Contacto
               </a>
             </li>
           </ul>

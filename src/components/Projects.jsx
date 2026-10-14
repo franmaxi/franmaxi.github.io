@@ -1,14 +1,8 @@
-import React, { useState } from 'react';
-import { FolderGit2, ExternalLink, Sparkles } from 'lucide-react';
+import React from 'react';
+import { FolderGit2, ExternalLink } from 'lucide-react';
 import { GithubIcon } from './Icons';
 
-export const Projects = ({ projects, social }) => {
-  const [filter, setFilter] = useState('all');
-
-  const filteredProjects = filter === 'featured'
-    ? projects.filter(p => p.featured)
-    : projects;
-
+export const Projects = ({ projects }) => {
   return (
     <section id="proyectos" className="section projects-section">
       <div className="container">
@@ -20,29 +14,13 @@ export const Projects = ({ projects, social }) => {
             Proyectos <span className="gradient-text">Destacados</span>
           </h2>
           <p className="section-subtitle">
-            Una selección de aplicaciones web y proyectos que he desarrollado recientemente.
+            Proyectos de sistemas distribuidos, arquitectura de software, algoritmos y desarrollo orientados a la práctica de ingeniería.
           </p>
-        </div>
-
-        {/* Filter buttons */}
-        <div className="projects-filter-bar">
-          <button
-            className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
-            onClick={() => setFilter('all')}
-          >
-            Todos ({projects.length})
-          </button>
-          <button
-            className={`filter-btn ${filter === 'featured' ? 'active' : ''}`}
-            onClick={() => setFilter('featured')}
-          >
-            <Sparkles size={14} /> Destacados ({projects.filter(p => p.featured).length})
-          </button>
         </div>
 
         {/* Projects Grid */}
         <div className="projects-grid">
-          {filteredProjects.map((project) => (
+          {projects.map((project) => (
             <article key={project.id} className="project-card">
               <div className="project-image-wrapper">
                 <img
@@ -97,9 +75,9 @@ export const Projects = ({ projects, social }) => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="project-link"
+                      className="project-link primary-link"
                     >
-                      <GithubIcon size={16} /> Código
+                      <GithubIcon size={16} /> Ver en GitHub
                     </a>
                   )}
                   {project.liveUrl && (
@@ -107,7 +85,7 @@ export const Projects = ({ projects, social }) => {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="project-link primary-link"
+                      className="project-link"
                     >
                       <ExternalLink size={16} /> Demo En Vivo
                     </a>
@@ -116,19 +94,6 @@ export const Projects = ({ projects, social }) => {
               </div>
             </article>
           ))}
-        </div>
-
-        {/* Callout to GitHub */}
-        <div className="more-projects-box">
-          <p>¿Buscas explorar más de mi código y contribuciones?</p>
-          <a
-            href={social.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-secondary"
-          >
-            <GithubIcon size={18} /> Explorar todos mis repositorios en GitHub
-          </a>
         </div>
 
       </div>

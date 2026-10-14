@@ -1,15 +1,25 @@
 import React from 'react';
-import { Cpu, Layers, Database, Wrench } from 'lucide-react';
+import { Cpu, Layers, Database, Code2, Network, GitBranch, Wrench } from 'lucide-react';
 
 export const Skills = ({ skills }) => {
   const getCategoryIcon = (category) => {
     switch (category) {
       case 'Frontend':
         return <Layers size={20} />;
+      case 'Backend & Lenguajes':
       case 'Backend':
         return <Cpu size={20} />;
+      case 'Arquitectura & Servicios':
+        return <Network size={20} />;
+      case 'Bases de Datos':
       case 'Bases de Datos & Cloud':
         return <Database size={20} />;
+      case 'Paradigmas de Programación':
+      case 'Paradigmas & Fundamentos':
+        return <Code2 size={20} />;
+      case 'Control de Versiones & Herramientas':
+      case 'Herramientas':
+        return <GitBranch size={20} />;
       default:
         return <Wrench size={20} />;
     }
@@ -26,7 +36,7 @@ export const Skills = ({ skills }) => {
             Habilidades & <span className="gradient-text">Herramientas</span>
           </h2>
           <p className="section-subtitle">
-            El ecosistema técnico y tecnologías modernas que utilizo en el día a día para crear aplicaciones.
+            Tecnologías, arquitectura de servicios, bases de datos y herramientas con las que desarrollo soluciones.
           </p>
         </div>
 
@@ -41,12 +51,14 @@ export const Skills = ({ skills }) => {
               </div>
 
               <div className="skill-badges-list">
-                {categoryGroup.items.map((skill, sIdx) => (
-                  <div key={sIdx} className="skill-pill">
-                    <span className="skill-name">{skill.name}</span>
-                    <span className="skill-level">{skill.level}</span>
-                  </div>
-                ))}
+                {categoryGroup.items.map((skill, sIdx) => {
+                  const name = typeof skill === 'string' ? skill : skill.name;
+                  return (
+                    <div key={sIdx} className="skill-pill">
+                      <span className="skill-name">{name}</span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ))}

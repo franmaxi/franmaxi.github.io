@@ -9,14 +9,6 @@ export const Hero = ({ personal, social }) => {
         {/* Glow ambient background sphere */}
         <div className="hero-ambient-glow" />
 
-        {/* Status pill badge */}
-        <div className="status-badge-container">
-          <div className="status-badge">
-            <span className="pulsing-dot" />
-            <span>{personal.statusBadge}</span>
-          </div>
-        </div>
-
         {/* Main headline */}
         <div className="hero-text-content">
           <h1 className="hero-title">
