@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { portfolioData } from './data/portfolioData';
 import { Navbar } from './components/Navbar';
 import { About } from './components/About';
@@ -10,6 +10,10 @@ import './components/components.css';
 
 export function App() {
   const { personal, social, skills, projects } = portfolioData;
+
+  useEffect(() => {
+    document.title = "Franco Ibañez Portafolio";
+  }, []);
 
   return (
     <div className="portfolio-app">
