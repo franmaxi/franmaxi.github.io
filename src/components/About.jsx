@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Server, Database, Users, Mail, ArrowRight } from 'lucide-react';
+import { User, Server, Database, Users, Mail, ArrowRight, FileText } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import profileImg from '../assets/profile.jpg';
 
@@ -46,6 +46,15 @@ export const About = ({ personal, social }) => {
             <div className="about-actions-row">
               <a href="#proyectos" className="btn btn-primary">
                 Ver Proyectos <ArrowRight size={16} />
+              </a>
+              <a
+                href={personal?.cvUrl || "/Franco_Ibanez_CV.pdf"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary"
+                aria-label="Ver Curriculum Vitae de Franco Ibañez"
+              >
+                <FileText size={16} /> Ver CV
               </a>
               <a href="#contacto" className="btn btn-secondary">
                 <Mail size={16} /> Contactar

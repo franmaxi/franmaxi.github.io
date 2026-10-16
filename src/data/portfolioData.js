@@ -4,7 +4,7 @@ export const portfolioData = {
     role: "Estudiante de Ingeniería en Sistemas | Backend & Arquitectura de Software",
     location: "Buenos Aires,Argentina",
     bio: "Estudiante de Ingeniería en Sistemas de Información (UTN). Apasionado por la arquitectura de servicios, el desarrollo backend y bases de datos, con fuerte enfoque en aprendizaje continuo, calidad y trabajo en equipo.",
-    cvUrl: "#", // Enlace a tu CV en PDF o Google Drive
+    cvUrl: "/Franco_Ibanez_CV.pdf",
     email: "mailto:francoiba038@gmail.com",
   },
   
