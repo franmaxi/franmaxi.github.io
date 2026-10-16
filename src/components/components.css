@@ -6,16 +6,22 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 1000;
   padding: 1.1rem 0;
   transition: var(--transition);
+  background: rgba(9, 9, 11, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .navbar-header.scrolled {
-  background: rgba(9, 9, 11, 0.85);
-  backdrop-filter: blur(16px);
+  background: rgba(9, 9, 11, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-subtle);
   padding: 0.85rem 0;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
 }
 
 .nav-wrapper {
@@ -1157,8 +1163,21 @@
 }
 
 @media (max-width: 640px) {
+  .navbar-header {
+    padding: 0.85rem 0;
+  }
+
+  .nav-contact-btn {
+    display: none;
+  }
+
   .section {
     padding: 3.5rem 0;
+  }
+
+  .about-section {
+    padding-top: 6.5rem;
+    padding-bottom: 3.5rem;
   }
 
   .hero-buttons-wrapper {
