@@ -70,15 +70,6 @@ export const Navbar = ({ personal, social }) => {
                 </a>
               </li>
             ))}
-            <li>
-              <a
-                href="#contacto"
-                className="btn btn-primary mobile-btn"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Contacto
-              </a>
-            </li>
           </ul>
         </div>
       )}
