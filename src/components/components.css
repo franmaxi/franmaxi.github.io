@@ -1167,8 +1167,22 @@
     padding: 0.85rem 0;
   }
 
+  .nav-actions {
+    gap: 0.65rem;
+  }
+
   .nav-contact-btn {
-    display: none;
+    display: inline-flex;
+    padding: 0.42rem 0.85rem;
+    font-size: 0.82rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem;
   }
 
   .section {
