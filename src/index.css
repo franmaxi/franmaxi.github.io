@@ -5,10 +5,10 @@
   --bg-card-hover: rgba(34, 34, 40, 0.85);
   
   --accent-yellow: #4ade80;
-  --accent-orange: #1368e8;
+  --accent-orange: #3b82f6;
   --accent-glow: rgba(74, 222, 128, 0.25);
-  --gradient-accent: linear-gradient(135deg, #4ade80 0%, #1368e8 100%);
-  --gradient-subtle: linear-gradient(135deg, rgba(74, 222, 128, 0.1) 0%, rgba(19, 104, 232, 0.05) 100%);
+  --gradient-accent: linear-gradient(135deg, #4ade80 0%, #3b82f6 100%);
+  --gradient-subtle: linear-gradient(135deg, rgba(74, 222, 128, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
   
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-hover: rgba(74, 222, 128, 0.35);
@@ -58,7 +58,7 @@ body::before {
   transform: translateX(-50%);
   width: 900px;
   height: 600px;
-  background: radial-gradient(circle, rgba(19, 104, 232, 0.08) 0%, rgba(74, 222, 128, 0.04) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, rgba(74, 222, 128, 0.04) 40%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -171,7 +171,7 @@ button {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(19, 104, 232, 0.4);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
 }
 
 .btn-secondary {
