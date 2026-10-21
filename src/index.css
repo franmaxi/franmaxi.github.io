@@ -4,14 +4,14 @@
   --bg-card: rgba(24, 24, 27, 0.7);
   --bg-card-hover: rgba(34, 34, 40, 0.85);
   
-  --accent-yellow: #fbbf24;
-  --accent-orange: #f97316;
-  --accent-glow: rgba(249, 115, 22, 0.25);
-  --gradient-accent: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
-  --gradient-subtle: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(249, 115, 22, 0.05) 100%);
+  --accent-yellow: #4ade80;
+  --accent-orange: #1368e8;
+  --accent-glow: rgba(74, 222, 128, 0.25);
+  --gradient-accent: linear-gradient(135deg, #4ade80 0%, #1368e8 100%);
+  --gradient-subtle: linear-gradient(135deg, rgba(74, 222, 128, 0.1) 0%, rgba(19, 104, 232, 0.05) 100%);
   
   --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(251, 191, 36, 0.35);
+  --border-hover: rgba(74, 222, 128, 0.35);
 
   --text-primary: #fafafa;
   --text-secondary: #a1a1aa;
@@ -58,7 +58,7 @@ body::before {
   transform: translateX(-50%);
   width: 900px;
   height: 600px;
-  background: radial-gradient(circle, rgba(249, 115, 22, 0.08) 0%, rgba(251, 191, 36, 0.04) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(19, 104, 232, 0.08) 0%, rgba(74, 222, 128, 0.04) 40%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -126,8 +126,8 @@ button {
   gap: 0.5rem;
   padding: 0.35rem 0.9rem;
   border-radius: var(--radius-full);
-  background: rgba(251, 191, 36, 0.08);
-  border: 1px solid rgba(251, 191, 36, 0.2);
+  background: rgba(74, 222, 128, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.2);
   color: var(--accent-yellow);
   font-size: 0.85rem;
   font-weight: 600;
@@ -171,7 +171,7 @@ button {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+  box-shadow: 0 8px 25px rgba(19, 104, 232, 0.4);
 }
 
 .btn-secondary {
